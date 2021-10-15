@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecteur de fichier</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="item">
+        <h3>Fichier</h3>
+        <div class="subitems">
+          <div class="subitem" onclick="openAndReadFile();">
+            <h3>Ouvrir</h3>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <h3>Mode d'affichage</h3>
+        <div class="subitems">
+          <div class="subitem" onclick="toggleInverse()">
+            <i id="check-inverse" class="fas fa-check-circle hidden"></i>
+            <h3>Inversé</h3>
+          </div>
+          <div class="subitem" onclick="togglePalindromique()">
+            <i id="check-palindromique" class="fas fa-check-circle hidden"></i>
+            <h3>Palindromique</h3>
+          </div>
+          <div class="subitem" onclick="toggleDiff()">
+            <i id="check-diff" class="fas fa-check-circle hidden"></i>
+            <h3>Diff</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main style="display: flex">
+      <div id="editor"></div>
+      <div id="diff"></div>
+    </main>
+    <script src="../js/index.js"></script>
+    <script
+      src="https://pagecdn.io/lib/ace/1.4.5/ace.js"
+      integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const editor = ace.edit("editor", {
+        wrap: true,
+      });
+
+      editor.setShowPrintMargin(false);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.topbar {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: whitesmoke;
+  height: 40px;
+}
+
+.topbar h3 {
+  cursor: pointer;
+}
+
+.subitems {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 99999999;
+}
+
+.subitem {
+  display: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+}
+
+.item {
+  height: 100%;
+  padding: 10px;
+  max-width: 175px;
+  position: relative;
+}
+
+.item:hover .subitem,
+.subitems:hover .subitem {
+  display: flex;
+}
+
+.item:hover .subitems {
+  display: block;
+}
+
+#editor {
+  position: relative;
+  padding-right: 10px;
+}
+
+#diff,
+#editor {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none!important;
+}
+
+.ace_gutter,
+.ace_gutter-cell {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: whitesmoke;
+}
+
+textarea {
+  display: none;
+}
+
+span {
+  display: inline-block;
+}
+
+.delete {
+  color: red;
+}
+
+.insert {
+  color: green;
+}
